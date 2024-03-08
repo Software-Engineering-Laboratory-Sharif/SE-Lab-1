@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main  # Trigger on push to main branch. Adjust as necessary.
-  pull_request:
-    branches:
-      - main
 
 jobs:
   deploy:
@@ -15,22 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          persist-credentials: false  # Prevents the automatic token to interfere with our deployment
-
-      - name: Configuring git
-        run: |
-          git config --local user.email "paksima.80@gmail.com"
-          git config --local user.name "sajad"
-
-      - name: Deploy Files
-        run: |
-          # Add your deployment commands here
-          # For example, to add, commit, and push files:
-          git add .
-          git commit -m "Deploy updates"
-          git push
-
-        env:
-          # If using a PAT for authentication:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          branch: gh-pages  # The branch the action should deploy to.
+          folder: build  # The folder the action should deploy.
+          token: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically creates this secret to authenticate in your workflows.
