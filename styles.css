@@ -71,6 +71,10 @@ button:hover{
 
 .equals{
     background-color: #01ff70;
-    grid-row: span 3;
+    grid-column: span 2;
     color: #fff;
+}
+
+.empty{
+    background-color: transparent;
 }
