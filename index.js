@@ -7,6 +7,8 @@ for (let button of buttons) {
 
         if (buttonValue === "C") {
             clearResult();
+        }else if (buttonValue === "DEL") {
+            deleteOne();
         } else if (buttonValue === "=") {
             calculateResult();
         } else {
@@ -27,4 +29,9 @@ function appendValue(buttonValue) {
 function clearResult()
 {
     result.innerText = "";
+}
+
+function deleteOne()
+{
+    result.innerText = result.innerText.slice(0, -1);
 }
