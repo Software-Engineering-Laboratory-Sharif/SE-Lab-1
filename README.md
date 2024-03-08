@@ -1,5 +1,62 @@
 # گزارش آزمایش اول
 
+## ماشین حساب
+در این آزمایش ما یک صفحه ماشین حساب با چهار عمل اصلی طراحی کردیم که در این 
+<a href="https://software-engineering-laboratory-sharif.github.io/SE-Lab-1"> لینک </a>
+قابل مشاهده است:
+
+![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/b599fe08-32d3-4529-8079-5d32d26ccd1f)
+
+### جزییات پیاده سازی
+
+در شکل زیر ساختار کلی پروژه را مشاهده می‌کنید. ما دو تا branch اصلی داریم: `main` که فرایند اسقرار محصول روی آن انجام می‌شود و `staging` که تغییرات را ابتدا روی آن مرج کرده، تست می‌کنیم و سپس با `pull-request` روی `main` مرج کرده و فرایند استقرار بصورت خودکار انجام می‌شود. بقیه branch ها هم با فرمت `feature/[FEATURE_NAME]` برای ویژگی جدید و یا `fix/[FIX_TYPE]` برای حل مشکلی از یک ویژگی در نظر گرفته شده است.
+
+![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/0dddd3f7-7a50-4458-9924-e36b11282a3a)
+
+همچنین فایل `gitignore.` برای جلوگیری از push شدن فایلها و فولدرهای local در نظر گرفته شده است:
+
+![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/fc4dc668-52a0-4a66-a06a-0a5f1b803da5)
+
+برای حالت conflict هم زمانیکه میخواستیم شاخه `feature/calculator-functions` را یه `staging` مرج کنیم پیش آمد که با استفاده از viewer خود github آن را resolve کردیم.
+
+![7](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/3ac85a67-6c6e-468c-8be0-0087fe12fd94)
+
+در شکلهای زیر چند نمونه از دستوراتی که استفاده کردیم را نشان دادیم:
+
+![3](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/010ecee3-e73a-4acb-b65f-7bf1dbfde755)
+
+![1](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/6c559467-ec1a-4fc0-bfb7-e3b49305022a)
+
+![2](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/d4325573-069c-43dc-8832-df3a92f2888d)
+
+همچنین برای محافظت از شاخه `main` یک rule‌را اضافه کردیم تا هیچ کس حتی administrator نتواند مستقیما به آن پوش کند.
+برای آن گزینه‌های `Require a pull request before merging` و `Do not allow bypassing the above settings` را فعال کردیم.
+
+![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/325a43d3-839e-4ae3-a7c8-5973d96c62bb)
+
+بعد از آن نتوانستیم مستقیما به `main` پوش کنیم:
+
+![6-1](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/ae4d34a8-86cd-411d-b5be-1edb0e629df3)
+
+برای افزودن قابلیت به `main` و `staging` از pull request استفاده کردیم و بعد از review و approve آن را مرج کردیم.
+
+![4](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/33032f92-6b2a-4b82-8947-9b9bde98ac00)
+
+![5](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/644364e0-6959-4c7a-a2aa-5fbe68a24c18)
+
+برای استقرار محصول در github pages از workflow های آماده استفاده کردیم. در آن آدرس root پروژه و شاخه‌ای که باید روی صفحه مستقر شود را مشخص می‌کنیم.
+
+![2024-03-08 (7)](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/56f0aa52-4716-4e85-bc14-80248fa72e23)
+
+آدرس جایی که محصول مستقر می‌شود هم بعدا نشان داد:
+
+![2024-03-08 (8)](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/b8676153-3685-4189-a96d-ea69519e7a4b)
+
+بعد از آن با هر push روی `main` اکشن مربوطه اجرا می‌شد.
+
+![8](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/800c1136-c5be-4b45-a658-b41cf28376d6)
+
+
 ## پرسشها
 1. پوشه‌ی `git.` چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
 
