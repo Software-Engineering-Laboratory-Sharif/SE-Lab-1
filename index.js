@@ -6,7 +6,7 @@ for (let button of buttons) {
         const buttonValue = button.textContent;
 
         if (buttonValue === "C") {
-            //TODO
+            clearResult();
         } else if (buttonValue === "=") {
             calculateResult();
         } else {
@@ -22,4 +22,9 @@ function calculateResult()
 
 function appendValue(buttonValue) {
     result.innerText += buttonValue;
+}
+
+function clearResult()
+{
+    result.innerText = "";
 }
