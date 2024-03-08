@@ -5,7 +5,8 @@
 <a href="https://software-engineering-laboratory-sharif.github.io/SE-Lab-1"> لینک </a>
 قابل مشاهده است:
 
-![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/59170401/b599fe08-32d3-4529-8079-5d32d26ccd1f)
+![image](https://github.com/Software-Engineering-Laboratory-Sharif/SE-Lab-1/assets/39655434/bf011994-3fbe-45e7-968d-c805b30805a2)
+
 
 ### جزییات پیاده سازی
 
