@@ -8,11 +8,16 @@ for (let button of buttons) {
         if (buttonValue === "C") {
             //TODO
         } else if (buttonValue === "=") {
-            //TODO
+            calculateResult();
         } else {
             appendValue(buttonValue);
         }
     });
+}
+
+function calculateResult()
+{
+    result.innerText = eval(result.innerText);
 }
 
 function appendValue(buttonValue) {
