@@ -18,9 +18,6 @@ jobs:
         with:
           persist-credentials: false  # Prevents the automatic token to interfere with our deployment
 
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-
       - name: Configuring git
         run: |
           git config --local user.email "paksima.80@gmail.com"
